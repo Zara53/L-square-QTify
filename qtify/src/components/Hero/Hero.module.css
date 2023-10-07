@@ -1,0 +1,17 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 212px;
+}
+
+.text {
+  width: 556px;
+  height: 100px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+}
