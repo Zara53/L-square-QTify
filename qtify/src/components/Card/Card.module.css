@@ -1,9 +1,10 @@
 .wrapper {
   width: 160px;
+  height: 232px;
 }
 
 .card {
-  position: relative;
+  position: absolute;
   width: 160px;
   height: 205px;
   border-radius: 10px;
@@ -11,7 +12,7 @@
 }
 
 .banner {
-  position: relative;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;

@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 // import Card from "./components/Card/Card";
 import { useEffect, useState } from "react";
-import { fetchTopAlbums } from "./api/api";
+import { fetchTopAlbums, fetchNewAlbums } from "./api/api";
 import Section from "./components/Section/Section";
 
 function App() {
@@ -11,7 +11,6 @@ function App() {
 
   const generateTopAlbumbsData = async () => {
     const data = await fetchTopAlbums();
-    // console.log(data);
     setTopAlbumsData(data);
   };
 
@@ -19,6 +18,16 @@ function App() {
     generateTopAlbumbsData();
   }, []);
 
+  const [newAlbumsData, setNewAlbumsData] = useState([]);
+
+  const generateNewAlbumbsData = async () => {
+    const data = await fetchNewAlbums();
+    setNewAlbumsData(data);
+  };
+
+  useEffect(() => {
+    generateNewAlbumbsData();
+  }, []);
   return (
     <div>
       <Navbar />
@@ -28,6 +37,8 @@ function App() {
       })} */}
       <div>
         <Section data={topAlbumsData} type="album" title="Top Albums" />
+        <Section data={newAlbumsData} type="album" title="New Albums" />
+        {/* <Section data={topAlbumsData} type="album" title="Songs" /> */}
       </div>
     </div>
   );
