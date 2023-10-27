@@ -1,13 +1,14 @@
 .wrapper {
   width: 160px;
-  height: 232px;
+  position: relative;
 }
 
 .card {
-  position: absolute;
+  position: relative;
   width: 160px;
   height: 205px;
   border-radius: 10px;
+  border-bottom: 0;
   overflow: hidden;
 }
 
@@ -31,4 +32,13 @@
   margin-top: 6px;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.pill {
+  background-color: var(--color-black);
+  width: max-content;
+  padding: 6px;
+  border-radius: 10px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 13px;
 }
